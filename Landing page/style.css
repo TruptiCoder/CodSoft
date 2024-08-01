@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -14,6 +15,8 @@ body {
 :root {
     --primary-color: #0ace35;
 }
+
+/* Navbar */
 
 nav {
     height: 80px;
@@ -57,34 +60,46 @@ nav {
     transition: all .3s ease-in-out;
 }
 
-#shop-btn {
-    border: transparent;
+.btn {
+    border: 2px solid var(--primary-color);
     border-radius: .3rem;
     padding: .5rem 1rem;
     background-color: var(--primary-color);
     color: white;
     font-size: 1.1rem;
+    width: fit-content;
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 main {
-    height: 100%;
+    height: calc(100% - 80px);
     width: 100%;
 }
+
+/* Home section */
 
 #home {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100%;
-    padding: 5rem 0 0 0;
 }
 
 #home .hero {
     width: 30%;
     height: 70%;
     border-radius: 1rem;
-    box-shadow: 0 0 10px #666;
-
+    border: 5px solid var(--primary-color);
+    background-image: url("https://images.unsplash.com/photo-1712746784067-e9e1bd86c043?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
 }
 
 #home .text {
@@ -114,4 +129,166 @@ ul {
     color: var(--primary-color);
     font-weight: 600;
     font-size: 1.2rem;
+}
+
+/* Menu */
+#menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 1rem;
+}
+
+#menu h3 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    position: relative;
+    padding: 1.5rem;
+}
+
+#menu h3::after {
+    content: "";
+    width: 80%;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}
+
+#menu p {
+    width: 42%;
+    text-align: center;
+    color: #444;
+}
+
+#menu li {
+    border: transparent;
+    background-color: #444;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+#menu .li-act {
+    background-color: var(--primary-color);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    margin: 0.3rem;
+}
+
+.card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+#menu .card p {
+    width: 100%;
+    text-align: start;
+    font-size: .8rem;
+}
+
+.price {
+    color: var(--primary-color);
+}
+
+/* Gallary */
+#gallary {
+    background-color: #111;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-block: 3rem;
+}   
+
+#gallary p {
+    color: #bbb;
+    margin: 1rem 0 2rem 0;
+}
+
+#gallary h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.hollow {
+    background-color: #111;
+    margin-left: 2rem;
+}
+
+#gallary .btn:hover {
+    background-color: #111;
+}
+
+#gallary .text {
+    width: 40%;
+}
+
+.photos {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.float {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    height: 200px;
+    width: 101%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: #0ace3584;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    opacity: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: opacity .5s ease-in-out;
+}
+
+.photo:hover .float {
+    opacity: 1;
 }
