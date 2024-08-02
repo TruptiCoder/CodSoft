@@ -17,7 +17,7 @@
             <a href="#gallary">Gallary</a>
             <a href="#contact">Contact Us</a>
         </div>
-        <button id="shop-btn" class="btn">Shop Online</button>
+        <a href="#menu" id="shop-btn" class="btn">Shop Online</a>
     </nav>
     <main>
         <section id="home">
@@ -30,7 +30,7 @@
                     <li>Fresh</li>
                     <li>Organic</li>
                 </ul>
-                <button class="btn">Learn More</button>
+                <a href="#menu" class="btn">Learn More</a>
             </div>
         </section>
         <section id="menu">
@@ -96,8 +96,7 @@
             <div class="text">
                 <h3>Our Food gallery</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem molestiae, quasi necessitatibus praesentium magnam quo, consequuntur quod ad corporis placeat sit aspernatur aliquid eum id, dignissimos incidunt minima aperiam! Modi.</p>
-                <button class="btn">Order Now</button>
-                <button class="btn hollow">Contact Us</button>
+                <a href="#menu" class="btn hollow">Order Now</a>
             </div>
             <div class="photos">
                 <div class="photo">
@@ -118,7 +117,31 @@
                 </div>
             </div>
         </section>
-        <section id="contact"></section>
+        <section id="contact">
+            <form action="/">
+                <div class="form">
+                    <h3>Contact Us</h3>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="no">Phone no.</label>
+                    <input type="number" name="no" id="no">
+                </div>
+                <div class="sub">
+                    <label for="msg">Message</label>
+                    <textarea name="msg" placeholder="Write your message here..." id="msg"></textarea>
+                    <button class="btn">Submit</button>
+                </div>
+            </form>
+        </section>
+        <footer>
+            <h3>The Italian SPOON</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas a tenetur similique repellat, culpa possimus, itaque optio consequuntur enim officia dolorum expedita excepturi</p>
+            <p>Copyright &copy;2020 The Italian Spoon Design by Trupti</p>
+        </footer>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
